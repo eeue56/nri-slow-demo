@@ -1,0 +1,13 @@
+<!doctype html>
+<head>
+	<title>Hello from Slow</title>
+	<meta id="elm-stuff" data-stuff="{{ stuff }}"></meta>
+</head>
+<body>
+	<h1></h1>
+	<script>
+		var stuff = document.getElementById('elm-stuff').getAttribute('data-stuff');
+		var elmHost = document.getElementById('elm-host');
+		var elmApp = Elm.Main.embed(elmHost, stuff);
+	</script>
+</body>
